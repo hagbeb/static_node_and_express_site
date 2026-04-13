@@ -300,7 +300,6 @@ nav a span {
   border: 1px solid transparent;
 }
 
-
 /* 
   Tablet layout styles 
 */
@@ -361,4 +360,8 @@ nav a span {
   .inner-wrapper {
     max-width: 1200px;
   }
+}
+
+.default-space {
+  padding: 10px 2em 20px 2em;
 }

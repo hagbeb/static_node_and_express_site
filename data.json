@@ -9,7 +9,9 @@
             "github_link": "https://github.com/hagbeb/random-quote-generator-treehouse",
             "image_urls": [
                 "/images/random_quotes_sq.jpg",
-                "/images/random_quote_rec.png"
+                [
+                    "/images/random_quote_rec.png"
+                ]
             ]
         },
         {
@@ -21,8 +23,10 @@
             "github_link": "https://github.com/hagbeb/data-pagination-and-filtering-v1",
             "image_urls": [
                 "/images/data_pagination_filtering_sq.jpg",
-                "/images/data_pagination_filtering_rec_a.png",
-                "/images/data_pagination_filtering_rec_b.png"                
+                [
+                    "/images/data_pagination_filtering_rec_a.png",
+                    "/images/data_pagination_filtering_rec_b.png"
+                ]                
             ]
         },
         {
@@ -34,8 +38,10 @@
             "github_link": "https://hagbeb.github.io/interactive-form/",
             "image_urls": [
                 "/images/interactive_form_sq.png",
-                "/images/interactive_form_rec_a.png",
-                "/images/interactive_form_rec_b.png"
+                [
+                    "/images/interactive_form_rec_a.png",
+                    "/images/interactive_form_rec_b.png"
+                ]
             ]
         },
         {
@@ -47,8 +53,10 @@
             "github_link": "https://github.com/hagbeb/OOP-Game-Show-App",
             "image_urls": [
                 "/images/oop_game_sq.png",
-                "/images/oop_game_rec_b.png",
-                "/images/oop_game_rec.png"                
+                [
+                    "/images/oop_game_rec_b.png",
+                    "/images/oop_game_rec.png"
+                ]                
             ]
         },
         {
@@ -60,8 +68,10 @@
             "github_link": "https://github.com/hagbeb/public-api-request",
             "image_urls": [
                 "/images/public_api_request_sq.jpg",
-                "/images/public_api_request_rec_a.png",
-                "/images/public_api_request_rec_b.png"
+                [
+                    "/images/public_api_request_rec_a.png",
+                    "/images/public_api_request_rec_b.png"
+                ]
             ]
         },
         {
@@ -73,9 +83,11 @@
             "github_link": "",
             "image_urls": [
                 "/images/dcs_sq.png",
-                "/images/dcs_rec_a.png",
-                "/images/dcs_rec_b.png",
-                "/images/dcs_rec_c.png"
+                [
+                    "/images/dcs_rec_a.png",
+                    "/images/dcs_rec_b.png",
+                    "/images/dcs_rec_c.png"
+                ]
             ]
         },
         {
@@ -87,9 +99,11 @@
             "github_link": "",
             "image_urls": [
                 "/images/wf_sq.png",
-                "/images/wf_rec.png",
-                "/images/wf_rec_subscribe.png",
-                "/images/wf_rec_paywall.png"
+                [
+                    "/images/wf_rec.png",
+                    "/images/wf_rec_subscribe.png",
+                    "/images/wf_rec_paywall.png"
+                ]
             ]
         }
     ]

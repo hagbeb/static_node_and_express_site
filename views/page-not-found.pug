@@ -1,0 +1,10 @@
+extends layout.pug
+
+block content
+    main.default-space
+        h1 Error: #{err.status}
+        h2= err.message
+        h3 Stack trace:
+        p= err.stack
+        br
+        a(href='/') >> Return to home page

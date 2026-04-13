@@ -6,17 +6,16 @@ block content
 
     h1 Boffware Projects
 
-    //- Replace with a description for your portfolio, what this project is, it's purpose, what it's supposed to accomplish, etc. 
     p This website is to showcase web sites and apps that I have created. Check out the projects below:
 
 
   article.portfolio-project-thumbs
     .projects-box.box.grid
       
-        each project in projects
+        each project, index in projects
 
           .cell
-            a(href=project.live_link)
-              img.thumbnail(src=`static${project.image_urls[0]}`, alt=project.project_name)
+            a(href=`/project/${index}`, target="_blank")
+              img.thumbnail(src=`/static${project.image_urls[0]}`, alt=project.project_name)
               h5 #{project.project_name}
 

@@ -64,6 +64,8 @@ app.use((err, req, res, next) => {
     // if the error was a 404
     if (err.status == 404) {
         err.message = "Sorry, this link appears to not exist.";
+        // render page-not-found.pug, pass in info about the error
+        res.render('page-not-found', { err });
     // if the error was a different type
     } else {
         // set error status if it doesn't have one
@@ -72,9 +74,9 @@ app.use((err, req, res, next) => {
         }
         // Create error message
         err.message = "Sorry. There was an error from the server."
+        // render error.pug, pass in info about the error
+        res.render('error', { err });
     }
-    // Send error information to the page. 
-    res.status(err.status).send(`Error: ${err.status}.<br><br>${err.message}`);
 });
 
 // set up the server using the listen method. Pass in the port number to serve the application on
