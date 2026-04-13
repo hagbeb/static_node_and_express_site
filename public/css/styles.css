@@ -255,6 +255,7 @@ nav a span {
   width: 100%;
 }
 
+
 .cell img {
   width: 100%;
   min-width: 100px;
@@ -325,7 +326,7 @@ nav a span {
     padding-top: 50px;
     padding-left: 15px;
   }
-
+/*
   .cell {
     margin: 0 0 15px;
   }
@@ -333,7 +334,7 @@ nav a span {
   .cell h5 {
     font-size: 1.25rem;
   }
-
+*/
   .grid {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   }
@@ -364,4 +365,91 @@ nav a span {
 
 .default-space {
   padding: 10px 2em 20px 2em;
+}
+
+/*  .cube-container div for each cube. Add perspective to apply 3D to each.
+Also, adding perspective here means the children's perspective will be the same, in case...
+... there is a 'perspective-origin' defined in a higher element */
+.cube-container {
+  box-shadow: 0 18px 40px 5px rgba(0,0,0,.4);
+  perspective: 800px;
+}
+
+/* This represents the cube. It's children are the 4 sides of cube (front, back, left and right).*/
+.photo-cube {
+  transition: transform 2s ease-in-out;
+  width: 330px;
+  height: 300px;
+  transform-style: preserve-3d;
+}
+
+/* On hover, rotate the cube until it's back is shown */
+.photo-cube:hover {
+  transform: rotateY(-270deg);
+}
+
+/* these are classes for each side of the cube. They are children of .photo-cube */
+.front,
+.back,
+.left,
+.right {
+  /* they are set to the size of their parent */
+  width: 100%;
+  height: 100%;
+  display: block;
+  /* This positions it absolutely relative to parent. */
+  position: absolute;
+  transform-style: inherit;
+  /* their backs are hidden, so we can see what's behind them */
+  backface-visibility: hidden;
+}
+
+/* move each part of the cube the right way so they transform in sync*/
+.front {
+  transform: translateZ(165px);
+}
+
+.back {
+  transform: translateZ(-165px) rotateY(270deg);
+  transform-origin: center left;
+}
+
+.left {
+  transform: rotateY(-270deg) translateX(165px);
+  transform-origin: top right;
+}
+
+.right {
+  transform: translateZ(-165px) rotateY(180deg);
+}
+
+.cube-container {
+    max-width: 200px;
+    text-align: center;
+    margin: 0 auto 4.5em;
+}
+.photo-desc {
+    font-size: .85em;
+    color: #fff;
+    padding: 1.1em 1em 0;
+    background: #345d88;
+}
+
+@media (min-width: 769px) {
+    .cube-container {
+        float: left;
+        margin-left: 16.6%;
+    }
+}
+@media (min-width: 1025px) {
+    .cube-container:first-child {
+        margin-left: 0;
+    }
+    .cube-container:last-child{
+        float: right;
+    }
+    .content {
+        max-width: 900px;
+        margin: auto;
+    }
 }

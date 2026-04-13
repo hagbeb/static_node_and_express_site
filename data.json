@@ -22,7 +22,7 @@
             "live_link": "https://hagbeb.github.io/data-pagination-and-filtering-v1/",
             "github_link": "https://github.com/hagbeb/data-pagination-and-filtering-v1",
             "image_urls": [
-                "/images/data_pagination_filtering_sq.jpg",
+                    "/images/data_pagination_filtering_sq.jpg",
                 [
                     "/images/data_pagination_filtering_rec_a.png",
                     "/images/data_pagination_filtering_rec_b.png"
@@ -82,7 +82,11 @@
             "live_link": "https://drivecleaningservices.co.uk/",
             "github_link": "",
             "image_urls": [
-                "/images/dcs_sq.png",
+                [
+                    "/images/dcs_sq.png",
+                    "/images/dcs_sq_b.jpg",
+                    "/images/dcs_sq_c.jpg"
+                ],
                 [
                     "/images/dcs_rec_a.png",
                     "/images/dcs_rec_b.png",
@@ -97,8 +101,9 @@
             "technologies": ["WordPress", "HTML", "CSS"],
             "live_link": "https://worldsfair.co.uk/",
             "github_link": "",
-            "image_urls": [
-                "/images/wf_sq.png",
+            "image_urls": 
+                [
+                    "/images/wf_sq.png",
                 [
                     "/images/wf_rec.png",
                     "/images/wf_rec_subscribe.png",

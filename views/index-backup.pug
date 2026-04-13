@@ -16,9 +16,8 @@ block content
           a(href=`/project/${index}`, target="_blank")
             div.photo-cube
               img.front(src=`/static${project.image_urls[0][0]}` alt=project.project_name)
-              .back.photo-desc
-                  h3 #{project.project_name}
-                  a.button(href='#') See project
+              img.back(src=`/static${project.image_urls[0][1]}` alt='')
+ 
               img.left(src=`/static${project.image_urls[0][1]}` alt='')
               img.right(src=`/static${project.image_urls[0][2]}` alt='')
             h5 #{project.project_name}
