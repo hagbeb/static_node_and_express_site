@@ -106,6 +106,7 @@
             "project_name": "DCS Drive Cleaning Services website",
             "description": "A business website made using WordPress for DCS Drive Cleaning Services in Wolverhampton. The website promotes the business and provides contact information for prospective customers.",
             "technologies": ["WordPress", "HTML", "CSS"],
+            "type": "Website",
             "live_link": "https://drivecleaningservices.co.uk/",
             "github_link": "",
             "image_urls": [
@@ -127,6 +128,7 @@
             "project_name": "World's Fair newspaper website",
             "description": "A website made using WordPress for World's Fair Limited in the UK, the newspaper which has covered the UK fairground industry since 1904. The website publishes articles, and provides an eCommerce store for users to subscribe online. It also has a paywall, so that articles are restricted to paid subscribers. The site also incorporates forms, adverts, and email marketing.",
             "technologies": ["WordPress", "HTML", "CSS"],
+            "type": "Website",
             "live_link": "https://worldsfair.co.uk/",
             "github_link": "",
             "image_urls": [

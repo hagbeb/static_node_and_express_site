@@ -20,8 +20,10 @@ block content
         ul
           each item in project.technologies
             li #{item}
-
-        a.btn-link(href=`${project.live_link}`) Live Demo
+        if project.type === 'Website'
+          a.btn-link(href=`${project.live_link}`) Live Website
+        else
+          a.btn-link(href=`${project.live_link}`) Live Demo       
         a.btn-link(href=`${project.github_link}`) GitHub Repo
 
     .project-img-box.box
