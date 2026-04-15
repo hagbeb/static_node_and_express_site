@@ -15,7 +15,7 @@ app.use('/static', express.static('public'));
 app.get('/', (req, res) => {
     // set res.locals to the projects array in data.json
     res.locals.projects = projects;
-    res.render('index');
+    res.render('index-backup');
 });
 
 // render the about page for the 'about' route
@@ -28,12 +28,10 @@ app.get('/project/:id', (req, res, next) => {
     // check if the id exists, if not create a 404 error and pass to the global handler
     // if the 'id' entered is = or greater than the length of the projects array, then it's invalid
     if (req.params.id >= projects.length) {
-        console.log('params doesnt match');
         // create error, give it 404 status, then pass to next function
         const err = new Error('Not found');
         err.status = 404;
         // pass the error to the global error handler
-        console.log('passing project route error to global error handler');
         next(err);
     // if the id is valid, render the relevant project
     } else {
@@ -49,18 +47,12 @@ app.use((req, res, next) => {
     // create error, give it 404 status, then pass to next function
     const err = new Error('Not found');
     err.status = 404;
-    //err.message = "Sorry, this link appears to not exist.";
-    // log out status and message
-    //res.send(`Error status: ${err.status}.<br><br>${err.message}`);
-    //console.log(`Error status: ${err.status}. ${err.message}`);
     // pass the error to the global handler
-    console.log('passing 404 error to global error handler');
     next(err);
 })
 
 // Global error handler for all errors.
 app.use((err, req, res, next) => {
-    console.log('starting global error handler');
     // if the error was a 404
     if (err.status == 404) {
         err.message = "Sorry, this link appears to not exist.";

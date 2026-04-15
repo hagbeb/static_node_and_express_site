@@ -16,10 +16,8 @@ block content
           a(href=`/project/${index}`, target="_blank")
             div.photo-cube
               .back-overlay
-                button Learn More
-              img.back(src=`/static${project.image_urls[0][3]}` alt=project.project_name)
               img.front(src=`/static${project.image_urls[0][0]}` alt=project.project_name)
-              img.left(src=`/static${project.image_urls[0][1]}` alt=project.project_name)
-              img.right(src=`/static${project.image_urls[0][2]}` alt=project.project_name)
+              img.back(src=`/static${project.image_urls[0][0]}` alt='')
+              img.left(src=`/static${project.image_urls[0][1]}` alt='')
+              img.right(src=`/static${project.image_urls[0][2]}` alt='')
             h5 #{project.project_name}
-

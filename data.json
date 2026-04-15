@@ -8,9 +8,14 @@
             "live_link": "https://hagbeb.github.io/random-quote-generator-treehouse/",
             "github_link": "https://github.com/hagbeb/random-quote-generator-treehouse",
             "image_urls": [
-                "/images/random_quotes_sq.jpg",
+                [   "/images/random_quotes_sq_b.jpg",
+                    "/images/random_quotes_sq_c.png",
+                    "/images/random_quotes_sq_f.png",
+                    "/images/random_quotes_sq_a.jpg"
+                ],
                 [
-                    "/images/random_quote_rec.png"
+                    "/images/random_quote_rec_cb.png",
+                    "/images/random_quote_rec_b.jpg"
                 ]
             ]
         },
@@ -22,7 +27,12 @@
             "live_link": "https://hagbeb.github.io/data-pagination-and-filtering-v1/",
             "github_link": "https://github.com/hagbeb/data-pagination-and-filtering-v1",
             "image_urls": [
-                    "/images/data_pagination_filtering_sq.jpg",
+                [
+                    "/images/data_pagination_filtering_sq_a.jpg",
+                    "/images/data_pagination_filtering_sq_b.png",
+                    "/images/data_pagination_filtering_sq_c.png",
+                    "/images/data_pagination_filtering_sq_d.png"
+                ],
                 [
                     "/images/data_pagination_filtering_rec_a.png",
                     "/images/data_pagination_filtering_rec_b.png"
@@ -31,16 +41,22 @@
         },
         {
             "id": 2,
-            "project_name": "Interactive Form",
+            "project_name": "Full Stack Conference Interactive Form",
             "description": "An interactive form where users can make bookings, and where user input is validated based on what the user types. The options available are dynamically adjusted based on user choices, and the total cost for the users selection is dynamically calculated.",
             "technologies": ["JavaScript", "HTML", "CSS"],
             "live_link": "https://hagbeb.github.io/interactive-form/",
             "github_link": "https://hagbeb.github.io/interactive-form/",
             "image_urls": [
-                "/images/interactive_form_sq.png",
+                [
+                    "/images/interactive_form_sq.png",
+                    "/images/interactive_form_sq_b.png",
+                    "/images/interactive_form_sq_c.png",
+                    "/images/interactive_form_sq_d.png"
+                ],
                 [
                     "/images/interactive_form_rec_a.png",
-                    "/images/interactive_form_rec_b.png"
+                    "/images/interactive_form_rec_b.png",
+                    "/images/interactive_form_rec_c.png"
                 ]
             ]
         },
@@ -52,22 +68,33 @@
             "live_link": "https://hagbeb.github.io/OOP-Game-Show-App/",
             "github_link": "https://github.com/hagbeb/OOP-Game-Show-App",
             "image_urls": [
-                "/images/oop_game_sq.png",
                 [
+                    "/images/oop_game_sq_a.png",
+                    "/images/oop_game_sq_b.png",
+                    "/images/oop_game_sq_c.png",
+                    "/images/oop_game_sq_d.png"
+                ],
+                [
+                    "/images/oop_game_rec_a.png",
                     "/images/oop_game_rec_b.png",
-                    "/images/oop_game_rec.png"
+                    "/images/oop_game_rec_c.png"
                 ]                
             ]
         },
         {
             "id": 4,
-            "project_name": "Public API Request",
+            "project_name": "Awesome Startup Employee Directory",
             "description": "An app that uses an external API to randomly generate a list of people with names, addresses and photos, and displays their information. Users can click a person to display them in a modal popup, and use buttons to slide to the next or previous people. There is also a search box to filter the list.",
             "technologies": ["JavaScript", "HTML", "CSS"],
             "live_link": "https://hagbeb.github.io/public-api-request/",
             "github_link": "https://github.com/hagbeb/public-api-request",
             "image_urls": [
-                "/images/public_api_request_sq.jpg",
+                [
+                    "/images/public_api_request_sq_a.jpg",
+                    "/images/public_api_request_sq_b.png",
+                    "/images/public_api_request_sq_c.png",
+                    "/images/public_api_request_sq_d.png"
+                ],
                 [
                     "/images/public_api_request_rec_a.png",
                     "/images/public_api_request_rec_b.png"
@@ -85,7 +112,8 @@
                 [
                     "/images/dcs_sq.png",
                     "/images/dcs_sq_b.jpg",
-                    "/images/dcs_sq_c.jpg"
+                    "/images/dcs_sq_c.jpg",
+                    "/images/dcs_sq_d.jpg"
                 ],
                 [
                     "/images/dcs_rec_a.png",
@@ -101,13 +129,20 @@
             "technologies": ["WordPress", "HTML", "CSS"],
             "live_link": "https://worldsfair.co.uk/",
             "github_link": "",
-            "image_urls": 
+            "image_urls": [
                 [
-                    "/images/wf_sq.png",
+                    "/images/wf_sq_a.png",
+                    "/images/wf_sq_b.png",
+                    "/images/wf_sq_c.png",
+                    "/images/wf_sq_d.png"
+                ],
                 [
-                    "/images/wf_rec.png",
-                    "/images/wf_rec_subscribe.png",
-                    "/images/wf_rec_paywall.png"
+                    "/images/wf_rec_a.png",
+                    "/images/wf_rec_b_paywall.png",
+                    "/images/wf_rec_c_subscribe.png",
+                    "/images/wf_rec_d_subscribe_b.png",
+                    "/images/wf_rec_e_checkout.png",
+                    "/images/wf_rec_f_footer.png"
                 ]
             ]
         }

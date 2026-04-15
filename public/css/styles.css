@@ -17,12 +17,12 @@ body {
 
 body {
   position: relative;
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: 'Merriweather';/*"Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;*/
   font-weight: normal;
   line-height: 1.5;
   color: #0a0a0a;
   background: #fefefe;
-  background: #000;
+  background: #2a2b2d;
   transform: translateX(0px);
   transition: all 0.4s ease-out;
 }
@@ -137,7 +137,7 @@ nav a span {
   height: 100%;
   min-height: 100%;
   padding: 20px;
-  background: #000;
+  background: #2a2b2d;
 }
 
 .sidebar-info-box {
@@ -167,7 +167,7 @@ nav a span {
   text-rendering: optimizeLegibility;
   line-height: 1.6;
   font-size: 14px;
-  color: #999
+  color: #b2b8b3
 }
 
 .sidebar a {
@@ -176,7 +176,7 @@ nav a span {
   font-size: 13px;
   letter-spacing: 2.5px;
   text-transform: uppercase;
-  color: #555;
+  color: #828583;
 }
 
 .header {
@@ -286,7 +286,7 @@ nav a span {
   max-width: 1065px;
   margin-bottom: 15px;
   border: 4px solid #fff;
-  box-shadow: 0 0 0 1px rgba(10, 10, 10, 0.2);
+  box-shadow: 0 0 10px 1px rgba(10, 10, 10, 0.2);
 }
 
 .btn-link {
@@ -297,7 +297,7 @@ nav a span {
   max-width: 255px;
   margin: auto 0 5px 0;
   padding: 0.85em 1em;
-  background-color: #333;
+  background-color: #2a2b2d;
   border: 1px solid transparent;
 }
 
@@ -378,14 +378,19 @@ Also, adding perspective here means the children's perspective will be the same,
 /* This represents the cube. It's children are the 4 sides of cube (front, back, left and right).*/
 .photo-cube {
   transition: transform 2s ease-in-out;
-  width: 330px;
-  height: 300px;
+  width: 20.6em;
+  height: 20em;
   transform-style: preserve-3d;
+  margin-bottom: 6px;
 }
 
 /* On hover, rotate the cube until it's back is shown */
 .photo-cube:hover {
   transform: rotateY(-270deg);
+}
+
+.photo-cube:hover > .back-overlay {
+  background-color: rgba(0,0,0,0.5);
 }
 
 /* these are classes for each side of the cube. They are children of .photo-cube */
@@ -409,7 +414,7 @@ Also, adding perspective here means the children's perspective will be the same,
   transform: translateZ(165px);
 }
 
-.back {
+.back, .back-overlay {
   transform: translateZ(-165px) rotateY(270deg);
   transform-origin: center left;
 }
@@ -432,7 +437,17 @@ Also, adding perspective here means the children's perspective will be the same,
     font-size: .85em;
     color: #fff;
     padding: 1.1em 1em 0;
-    background: #345d88;
+}
+
+.back-overlay {
+    transition: background-color 0.3s ease-out 1.5s;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
 }
 
 @media (min-width: 769px) {
@@ -452,4 +467,24 @@ Also, adding perspective here means the children's perspective will be the same,
         max-width: 900px;
         margin: auto;
     }
+}
+
+.photo-cube:hover > .back-overlay > button {
+  visibility: visible;
+  transition: visibility 0.3s ease-out 1.4s;
+}
+
+.back-overlay button {
+  visibility: hidden;
+  transition: visibility 0.8s ease-out;
+  padding: 10px 18px;
+  background: #ddd;
+  color: #2a2b2d;
+  cursor: pointer;
+  box-shadow: 0 0 0 3px rgba(10, 10, 10, 0.2);
+}
+
+/* box-shadow for the images on the home page */
+.photo-cube > img {
+  box-shadow: 0px 0px 9px 2px rgba(10, 10, 10, 0.2)
 }
