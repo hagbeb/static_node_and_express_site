@@ -15,7 +15,7 @@ app.use('/static', express.static('public'));
 app.get('/', (req, res) => {
     // set res.locals to the projects array in data.json
     res.locals.projects = projects;
-    res.render('index-backup');
+    res.render('index');
 });
 
 // render the about page for the 'about' route

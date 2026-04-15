@@ -251,11 +251,6 @@ nav a span {
   margin: 0 auto 8px;
 }
 
-/* center headlines*/
-.cell {
-  text-align: center;
-}
-
 .cell a {
   width: 100%;
 }
@@ -382,13 +377,11 @@ Also, adding perspective here means the children's perspective will be the same,
 
 /* This represents the cube. It's children are the 4 sides of cube (front, back, left and right).*/
 .photo-cube {
-  margin: 0 auto;
   transition: transform 2s ease-in-out;
-  width: 90%;
-  aspect-ratio : 1 / 1;
-  /*height: 20rem;*/
+  width: 20.6em;
+  height: 20em;
   transform-style: preserve-3d;
-  margin-bottom: 7px;
+  margin-bottom: 6px;
 }
 
 /* On hover, rotate the cube until it's back is shown */
@@ -416,28 +409,23 @@ Also, adding perspective here means the children's perspective will be the same,
   backface-visibility: hidden;
 }
 
-:root {
-  --pos-translate-amount: 170px;
-  --neg-translate-amount: -170px;
-}
-
 /* move each part of the cube the right way so they transform in sync*/
 .front {
-  transform: translateZ(var(--pos-translate-amount));
+  transform: translateZ(165px);
 }
 
 .back, .back-overlay {
-  transform: translateZ(var(--neg-translate-amount)) rotateY(270deg);
+  transform: translateZ(-165px) rotateY(270deg);
   transform-origin: center left;
 }
 
 .left {
-  transform: rotateY(-270deg) translateX(var(--pos-translate-amount));
+  transform: rotateY(-270deg) translateX(165px);
   transform-origin: top right;
 }
 
 .right {
-  transform: translateZ(var(--neg-translate-amount)) rotateY(180deg);
+  transform: translateZ(-165px) rotateY(180deg);
 }
 
 .cube-container {
@@ -499,11 +487,4 @@ Also, adding perspective here means the children's perspective will be the same,
 /* box-shadow for the images on the home page */
 .photo-cube > img {
   box-shadow: 0px 0px 9px 2px rgba(10, 10, 10, 0.2)
-}
-
-/* increase the size of the cube on the smallest devices */
-@media (max-width: 500px) {
-    .photo-cube {
-        width: 100%;
-    }
 }
