@@ -56,6 +56,8 @@ app.use((err, req, res, next) => {
     // if the error was a 404
     if (err.status == 404) {
         err.message = "Sorry, this link appears to not exist.";
+        // log out error message to the console
+        console.log(err.message);
         // render page-not-found.pug, pass in info about the error
         res.render('page-not-found', { err });
     // if the error was a different type
@@ -66,6 +68,8 @@ app.use((err, req, res, next) => {
         }
         // Create error message
         err.message = "Sorry. There was an error from the server."
+        // log out error message to the console
+        console.log(err.message);
         // render error.pug, pass in info about the error
         res.render('error', { err });
     }
