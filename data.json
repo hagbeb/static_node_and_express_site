@@ -45,7 +45,7 @@
             "description": "An interactive form where users can make bookings, and where user input is validated based on what the user types. The options available are dynamically adjusted based on user choices, and the total cost for the users selection is dynamically calculated.",
             "technologies": ["JavaScript", "HTML", "CSS"],
             "live_link": "https://hagbeb.github.io/interactive-form/",
-            "github_link": "https://hagbeb.github.io/interactive-form/",
+            "github_link": "https://github.com/hagbeb/interactive-form",
             "image_urls": [
                 [
                     "/images/interactive_form_sq.png",
@@ -104,7 +104,7 @@
         {
             "id": 5,
             "project_name": "DCS Drive Cleaning Services website",
-            "description": "A business website made using WordPress for DCS Drive Cleaning Services in Wolverhampton. The website promotes the business and provides contact information for prospective customers.",
+            "description": "A business website made using WordPress for DCS Drive Cleaning Services in Wolverhampton. The website promotes the business and provides contact information for prospective customers. The website has won new customers for the company from people who have found the website via Google search.",
             "technologies": ["WordPress", "HTML", "CSS"],
             "type": "Website",
             "live_link": "https://drivecleaningservices.co.uk/",

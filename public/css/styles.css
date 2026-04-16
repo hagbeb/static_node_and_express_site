@@ -251,15 +251,16 @@ nav a span {
   margin: 0 auto 8px;
 }
 
-/* center headlines*/
 .cell {
-  text-align: center;
+    /* add perspective so the cube can be 3D */
+    perspective: 800px;
+    /* center headlines*/
+    text-align: center;
 }
 
 .cell a {
   width: 100%;
 }
-
 
 .cell img {
   width: 100%;
@@ -335,11 +336,11 @@ nav a span {
   .cell {
     margin: 0 0 15px;
   }
-
+*/
   .cell h5 {
     font-size: 1.25rem;
   }
-*/
+
   .grid {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   }
@@ -367,26 +368,27 @@ nav a span {
     max-width: 1200px;
   }
 }
-
+/* ALSO EXTRA STYLE */
 .default-space {
   padding: 10px 2em 20px 2em;
 }
 
-/*  .cube-container div for each cube. Add perspective to apply 3D to each.
-Also, adding perspective here means the children's perspective will be the same, in case...
-... there is a 'perspective-origin' defined in a higher element */
-.cube-container {
-  box-shadow: 0 18px 40px 5px rgba(0,0,0,.4);
-  perspective: 800px;
-}
+/** 
+* EXTRA STYLES
+*/
+
+/**
+* STYLES FOR ROTATING 3D CUBE
+*/
 
 /* This represents the cube. It's children are the 4 sides of cube (front, back, left and right).*/
 .photo-cube {
   margin: 0 auto;
+  /* The cube will rotate over 2 seconds*/
   transition: transform 2s ease-in-out;
   width: 90%;
   aspect-ratio : 1 / 1;
-  /*height: 20rem;*/
+  /* preserve the 'persepective' property set in its parent .cell container */
   transform-style: preserve-3d;
   margin-bottom: 7px;
 }
@@ -394,10 +396,6 @@ Also, adding perspective here means the children's perspective will be the same,
 /* On hover, rotate the cube until it's back is shown */
 .photo-cube:hover {
   transform: rotateY(-270deg);
-}
-
-.photo-cube:hover > .back-overlay {
-  background-color: rgba(0,0,0,0.5);
 }
 
 /* these are classes for each side of the cube. They are children of .photo-cube */
@@ -409,19 +407,21 @@ Also, adding perspective here means the children's perspective will be the same,
   width: 100%;
   height: 100%;
   display: block;
-  /* This positions it absolutely relative to parent. */
+  /* This positions them absolutely relative to parent. */
   position: absolute;
   transform-style: inherit;
-  /* their backs are hidden, so we can see what's behind them */
+  /* their backs are hidden, so we can't see what's behind them */
   backface-visibility: hidden;
 }
 
+/* root element, to hold the variables which will be used by the sides of the cube.
+  These will be adjusted in JS on page load + screen resize, to adapt to the cube's width */
 :root {
   --pos-translate-amount: 170px;
   --neg-translate-amount: -170px;
 }
 
-/* move each part of the cube the right way so they transform in sync*/
+/* the sides of the cube are transformed to create a cube */
 .front {
   transform: translateZ(var(--pos-translate-amount));
 }
@@ -440,18 +440,9 @@ Also, adding perspective here means the children's perspective will be the same,
   transform: translateZ(var(--neg-translate-amount)) rotateY(180deg);
 }
 
-.cube-container {
-    max-width: 200px;
-    text-align: center;
-    margin: 0 auto 4.5em;
-}
-.photo-desc {
-    font-size: .85em;
-    color: #fff;
-    padding: 1.1em 1em 0;
-}
-
+/* the back-overlay covers the back side of the cube */
 .back-overlay {
+    /* It will transition to display the overlay towards the end of the cube rotation */
     transition: background-color 0.3s ease-out 1.5s;
     position: absolute;
     display: flex;
@@ -459,35 +450,21 @@ Also, adding perspective here means the children's perspective will be the same,
     justify-content: center;
     width: 100%;
     height: 100%;
+    /* increase z-index to make sure .back-overlay is visible over back */
     z-index: 3;
 }
 
-@media (min-width: 769px) {
-    .cube-container {
-        float: left;
-        margin-left: 16.6%;
-    }
-}
-@media (min-width: 1025px) {
-    .cube-container:first-child {
-        margin-left: 0;
-    }
-    .cube-container:last-child{
-        float: right;
-    }
-    .content {
-        max-width: 900px;
-        margin: auto;
-    }
+/* When the cube is hovered over, the back-overlay will change its colour, using the transition...
+... defined in the .back-overlay class */
+.photo-cube:hover > .back-overlay {
+  background-color: rgba(0,0,0,0.5);
 }
 
-.photo-cube:hover > .back-overlay > button {
-  visibility: visible;
-  transition: visibility 0.3s ease-out 1.4s;
-}
-
+/* Styles for the button that appears on the overlay on the back of the rotating cube */
 .back-overlay button {
+  /* It is hidden by default */
   visibility: hidden;
+  /* It will transition back to its default visibility of hidden after cube hover ends */
   transition: visibility 0.8s ease-out;
   padding: 10px 18px;
   background: #ddd;
@@ -495,6 +472,16 @@ Also, adding perspective here means the children's perspective will be the same,
   cursor: pointer;
   box-shadow: 0 0 0 3px rgba(10, 10, 10, 0.2);
 }
+
+/* the button over the back-overlay will become visible on transition, during cube rotation. */
+.photo-cube:hover > .back-overlay > button {
+  visibility: visible;
+  transition: visibility 0.3s ease-out 1.4s;
+}
+
+/*
+* OTHER EXTRA STYLES
+**/
 
 /* box-shadow for the images on the home page */
 .photo-cube > img {
