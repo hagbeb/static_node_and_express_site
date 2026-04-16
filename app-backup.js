@@ -23,8 +23,8 @@ app.get('/about', (req, res) => {
     res.render('about');
 });
 
-// callback for when the user follows a route for 'project' or 'projects'
-const handleProject = (req, res, next) => {
+// render the /project route, passing in the id route parameter for a particular project
+app.get('/project/:id', (req, res, next) => {
     // check if the id exists, if not create a 404 error and pass to the global handler
     // if the 'id' entered is = or greater than the length of the projects array, then it's invalid
     if (req.params.id >= projects.length) {
@@ -40,11 +40,7 @@ const handleProject = (req, res, next) => {
         project: projects[req.params.id]
         });
     }
-}
-
-// handle the /project(s) routes, passing in the id route parameter for a particular project
-app.get('/project/:id', handleProject);
-app.get('/projects/:id', handleProject);
+});
 
 // handle 404 errors. This creates the error object, then hands it off to the handler below
 app.use((req, res, next) => {
